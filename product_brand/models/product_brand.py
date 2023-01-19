@@ -41,3 +41,12 @@ class ProductBrand(models.Model):
         data = {group["product_brand_id"][0]: group["__count"] for group in groups}
         for brand in self:
             brand.products_count = data.get(brand.id, 0)
+
+
+class ProductBrandModel(models.Model):
+    _name = "product.brand.model"
+    _description = "Product Brand Model"
+    _order = "name"
+
+    name = fields.Char("Model", required=True)
+    brand_id = fields.Many2one("product.brand", string="Brand", required=True)

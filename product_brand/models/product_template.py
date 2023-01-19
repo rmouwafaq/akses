@@ -6,7 +6,7 @@
 # Copyright 2019 Kaushal Prajapati <kbprajapati@live.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class ProductTemplate(models.Model):
@@ -15,3 +15,10 @@ class ProductTemplate(models.Model):
     product_brand_id = fields.Many2one(
         "product.brand", string="Brand", help="Select a brand for this product"
     )
+    product_brand_model_id = fields.Many2one(
+        "product.brand.model", string="Model", help="Select a Model for this product",
+    )
+
+    @api.onchange('product_brand_id')
+    def onchange_brand(self):
+        return

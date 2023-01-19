@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="portal_my_orders" inherit_id="sale.portal_my_orders">
+            <xpath expr="//thead" position="before">
+                <div class="btn-group flex-grow-1 me-1 mb-1" t-if="request.env.user.partner_id.b2b">
+                    <a class="btn btn-secondary o_download_btn" title="Nouvelle commande"
+                       href="/shop"><i class="fa fa-plus"></i> Nouvelle commande</a>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

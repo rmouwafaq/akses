@@ -1,3 +1,6 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
 "access_product_brand_product_manager","product.brand","model_product_brand","base.group_partner_manager",1,1,1,1
 "access_product_brand_public","product.brand.public","model_product_brand",,1,0,0,0
+
+"access_product_brand_model_manager","product.brand.model","model_product_brand_model","base.group_partner_manager",1,1,1,1
+"access_product_brand_model_public","product.brand.model.public","model_product_brand_model",,1,0,0,0
